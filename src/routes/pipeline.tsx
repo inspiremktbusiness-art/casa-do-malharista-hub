@@ -33,7 +33,19 @@ function PipelinePage() {
               <div key={etapa.id} className="w-72 shrink-0">
                 <div className="mb-2 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className={`h-2 w-2 rounded-full bg-${etapa.cor === "primary" ? "primary" : etapa.cor === "success" ? "[color:var(--success)]" : etapa.cor === "warning" ? "[color:var(--warning)]" : "[color:var(--info)]"}`} />
+                    <span
+                      className="h-2 w-2 rounded-full"
+                      style={{
+                        background:
+                          etapa.cor === "primary"
+                            ? "var(--primary)"
+                            : etapa.cor === "success"
+                              ? "var(--success)"
+                              : etapa.cor === "warning"
+                                ? "var(--warning)"
+                                : "var(--info)",
+                      }}
+                    />
                     <h3 className="text-sm font-semibold">{etapa.nome}</h3>
                     <span className="text-xs text-muted-foreground">{cards.length}</span>
                   </div>

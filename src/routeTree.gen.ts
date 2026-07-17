@@ -9,18 +9,120 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as PropostasRouteImport } from './routes/propostas'
+import { Route as ProgramacaoRouteImport } from './routes/programacao'
+import { Route as PortalClienteRouteImport } from './routes/portal-cliente'
 import { Route as PipelineRouteImport } from './routes/pipeline'
+import { Route as PedidosRouteImport } from './routes/pedidos'
+import { Route as MarketingRouteImport } from './routes/marketing'
+import { Route as IntegracoesRouteImport } from './routes/integracoes'
+import { Route as IndicadoresRouteImport } from './routes/indicadores'
+import { Route as ImportacaoRouteImport } from './routes/importacao'
+import { Route as FinanceiroRouteImport } from './routes/financeiro'
+import { Route as FengFamilyRouteImport } from './routes/feng-family'
+import { Route as EstoqueRouteImport } from './routes/estoque'
+import { Route as DocumentosRouteImport } from './routes/documentos'
+import { Route as CursosRouteImport } from './routes/cursos'
 import { Route as CrmRouteImport } from './routes/crm'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as AutomacoesRouteImport } from './routes/automacoes'
+import { Route as AssistenciaRouteImport } from './routes/assistencia'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropostasRoute = PropostasRouteImport.update({
+  id: '/propostas',
+  path: '/propostas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramacaoRoute = ProgramacaoRouteImport.update({
+  id: '/programacao',
+  path: '/programacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalClienteRoute = PortalClienteRouteImport.update({
+  id: '/portal-cliente',
+  path: '/portal-cliente',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PipelineRoute = PipelineRouteImport.update({
   id: '/pipeline',
   path: '/pipeline',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PedidosRoute = PedidosRouteImport.update({
+  id: '/pedidos',
+  path: '/pedidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketingRoute = MarketingRouteImport.update({
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegracoesRoute = IntegracoesRouteImport.update({
+  id: '/integracoes',
+  path: '/integracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndicadoresRoute = IndicadoresRouteImport.update({
+  id: '/indicadores',
+  path: '/indicadores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImportacaoRoute = ImportacaoRouteImport.update({
+  id: '/importacao',
+  path: '/importacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceiroRoute = FinanceiroRouteImport.update({
+  id: '/financeiro',
+  path: '/financeiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FengFamilyRoute = FengFamilyRouteImport.update({
+  id: '/feng-family',
+  path: '/feng-family',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstoqueRoute = EstoqueRouteImport.update({
+  id: '/estoque',
+  path: '/estoque',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentosRoute = DocumentosRouteImport.update({
+  id: '/documentos',
+  path: '/documentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursosRoute = CursosRouteImport.update({
+  id: '/cursos',
+  path: '/cursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrmRoute = CrmRouteImport.update({
   id: '/crm',
   path: '/crm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutomacoesRoute = AutomacoesRouteImport.update({
+  id: '/automacoes',
+  path: '/automacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssistenciaRoute = AssistenciaRouteImport.update({
+  id: '/assistencia',
+  path: '/assistencia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,36 +133,193 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/assistencia': typeof AssistenciaRoute
+  '/automacoes': typeof AutomacoesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
   '/crm': typeof CrmRoute
+  '/cursos': typeof CursosRoute
+  '/documentos': typeof DocumentosRoute
+  '/estoque': typeof EstoqueRoute
+  '/feng-family': typeof FengFamilyRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/importacao': typeof ImportacaoRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/integracoes': typeof IntegracoesRoute
+  '/marketing': typeof MarketingRoute
+  '/pedidos': typeof PedidosRoute
   '/pipeline': typeof PipelineRoute
+  '/portal-cliente': typeof PortalClienteRoute
+  '/programacao': typeof ProgramacaoRoute
+  '/propostas': typeof PropostasRoute
+  '/relatorios': typeof RelatoriosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/assistencia': typeof AssistenciaRoute
+  '/automacoes': typeof AutomacoesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
   '/crm': typeof CrmRoute
+  '/cursos': typeof CursosRoute
+  '/documentos': typeof DocumentosRoute
+  '/estoque': typeof EstoqueRoute
+  '/feng-family': typeof FengFamilyRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/importacao': typeof ImportacaoRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/integracoes': typeof IntegracoesRoute
+  '/marketing': typeof MarketingRoute
+  '/pedidos': typeof PedidosRoute
   '/pipeline': typeof PipelineRoute
+  '/portal-cliente': typeof PortalClienteRoute
+  '/programacao': typeof ProgramacaoRoute
+  '/propostas': typeof PropostasRoute
+  '/relatorios': typeof RelatoriosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/assistencia': typeof AssistenciaRoute
+  '/automacoes': typeof AutomacoesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
   '/crm': typeof CrmRoute
+  '/cursos': typeof CursosRoute
+  '/documentos': typeof DocumentosRoute
+  '/estoque': typeof EstoqueRoute
+  '/feng-family': typeof FengFamilyRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/importacao': typeof ImportacaoRoute
+  '/indicadores': typeof IndicadoresRoute
+  '/integracoes': typeof IntegracoesRoute
+  '/marketing': typeof MarketingRoute
+  '/pedidos': typeof PedidosRoute
   '/pipeline': typeof PipelineRoute
+  '/portal-cliente': typeof PortalClienteRoute
+  '/programacao': typeof ProgramacaoRoute
+  '/propostas': typeof PropostasRoute
+  '/relatorios': typeof RelatoriosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/crm' | '/pipeline'
+  fullPaths:
+    | '/'
+    | '/assistencia'
+    | '/automacoes'
+    | '/configuracoes'
+    | '/crm'
+    | '/cursos'
+    | '/documentos'
+    | '/estoque'
+    | '/feng-family'
+    | '/financeiro'
+    | '/importacao'
+    | '/indicadores'
+    | '/integracoes'
+    | '/marketing'
+    | '/pedidos'
+    | '/pipeline'
+    | '/portal-cliente'
+    | '/programacao'
+    | '/propostas'
+    | '/relatorios'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/crm' | '/pipeline'
-  id: '__root__' | '/' | '/crm' | '/pipeline'
+  to:
+    | '/'
+    | '/assistencia'
+    | '/automacoes'
+    | '/configuracoes'
+    | '/crm'
+    | '/cursos'
+    | '/documentos'
+    | '/estoque'
+    | '/feng-family'
+    | '/financeiro'
+    | '/importacao'
+    | '/indicadores'
+    | '/integracoes'
+    | '/marketing'
+    | '/pedidos'
+    | '/pipeline'
+    | '/portal-cliente'
+    | '/programacao'
+    | '/propostas'
+    | '/relatorios'
+  id:
+    | '__root__'
+    | '/'
+    | '/assistencia'
+    | '/automacoes'
+    | '/configuracoes'
+    | '/crm'
+    | '/cursos'
+    | '/documentos'
+    | '/estoque'
+    | '/feng-family'
+    | '/financeiro'
+    | '/importacao'
+    | '/indicadores'
+    | '/integracoes'
+    | '/marketing'
+    | '/pedidos'
+    | '/pipeline'
+    | '/portal-cliente'
+    | '/programacao'
+    | '/propostas'
+    | '/relatorios'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AssistenciaRoute: typeof AssistenciaRoute
+  AutomacoesRoute: typeof AutomacoesRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
   CrmRoute: typeof CrmRoute
+  CursosRoute: typeof CursosRoute
+  DocumentosRoute: typeof DocumentosRoute
+  EstoqueRoute: typeof EstoqueRoute
+  FengFamilyRoute: typeof FengFamilyRoute
+  FinanceiroRoute: typeof FinanceiroRoute
+  ImportacaoRoute: typeof ImportacaoRoute
+  IndicadoresRoute: typeof IndicadoresRoute
+  IntegracoesRoute: typeof IntegracoesRoute
+  MarketingRoute: typeof MarketingRoute
+  PedidosRoute: typeof PedidosRoute
   PipelineRoute: typeof PipelineRoute
+  PortalClienteRoute: typeof PortalClienteRoute
+  ProgramacaoRoute: typeof ProgramacaoRoute
+  PropostasRoute: typeof PropostasRoute
+  RelatoriosRoute: typeof RelatoriosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/propostas': {
+      id: '/propostas'
+      path: '/propostas'
+      fullPath: '/propostas'
+      preLoaderRoute: typeof PropostasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programacao': {
+      id: '/programacao'
+      path: '/programacao'
+      fullPath: '/programacao'
+      preLoaderRoute: typeof ProgramacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal-cliente': {
+      id: '/portal-cliente'
+      path: '/portal-cliente'
+      fullPath: '/portal-cliente'
+      preLoaderRoute: typeof PortalClienteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pipeline': {
       id: '/pipeline'
       path: '/pipeline'
@@ -68,11 +327,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PipelineRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pedidos': {
+      id: '/pedidos'
+      path: '/pedidos'
+      fullPath: '/pedidos'
+      preLoaderRoute: typeof PedidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketing': {
+      id: '/marketing'
+      path: '/marketing'
+      fullPath: '/marketing'
+      preLoaderRoute: typeof MarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integracoes': {
+      id: '/integracoes'
+      path: '/integracoes'
+      fullPath: '/integracoes'
+      preLoaderRoute: typeof IntegracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/indicadores': {
+      id: '/indicadores'
+      path: '/indicadores'
+      fullPath: '/indicadores'
+      preLoaderRoute: typeof IndicadoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/importacao': {
+      id: '/importacao'
+      path: '/importacao'
+      fullPath: '/importacao'
+      preLoaderRoute: typeof ImportacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financeiro': {
+      id: '/financeiro'
+      path: '/financeiro'
+      fullPath: '/financeiro'
+      preLoaderRoute: typeof FinanceiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feng-family': {
+      id: '/feng-family'
+      path: '/feng-family'
+      fullPath: '/feng-family'
+      preLoaderRoute: typeof FengFamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estoque': {
+      id: '/estoque'
+      path: '/estoque'
+      fullPath: '/estoque'
+      preLoaderRoute: typeof EstoqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documentos': {
+      id: '/documentos'
+      path: '/documentos'
+      fullPath: '/documentos'
+      preLoaderRoute: typeof DocumentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursos': {
+      id: '/cursos'
+      path: '/cursos'
+      fullPath: '/cursos'
+      preLoaderRoute: typeof CursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crm': {
       id: '/crm'
       path: '/crm'
       fullPath: '/crm'
       preLoaderRoute: typeof CrmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automacoes': {
+      id: '/automacoes'
+      path: '/automacoes'
+      fullPath: '/automacoes'
+      preLoaderRoute: typeof AutomacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assistencia': {
+      id: '/assistencia'
+      path: '/assistencia'
+      fullPath: '/assistencia'
+      preLoaderRoute: typeof AssistenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,8 +437,25 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AssistenciaRoute: AssistenciaRoute,
+  AutomacoesRoute: AutomacoesRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
   CrmRoute: CrmRoute,
+  CursosRoute: CursosRoute,
+  DocumentosRoute: DocumentosRoute,
+  EstoqueRoute: EstoqueRoute,
+  FengFamilyRoute: FengFamilyRoute,
+  FinanceiroRoute: FinanceiroRoute,
+  ImportacaoRoute: ImportacaoRoute,
+  IndicadoresRoute: IndicadoresRoute,
+  IntegracoesRoute: IntegracoesRoute,
+  MarketingRoute: MarketingRoute,
+  PedidosRoute: PedidosRoute,
   PipelineRoute: PipelineRoute,
+  PortalClienteRoute: PortalClienteRoute,
+  ProgramacaoRoute: ProgramacaoRoute,
+  PropostasRoute: PropostasRoute,
+  RelatoriosRoute: RelatoriosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
